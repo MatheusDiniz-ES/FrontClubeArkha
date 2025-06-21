@@ -1,0 +1,204 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+ 
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+
+    --main-color-900: #00263F; /* Azul mais escuro */
+    --main-color-800: #003A5C;
+    --main-color-700: #efbc2f;
+    --main-color-600: #0064A3;
+    --main-color-500: #BF9006; /* Azul moderado */
+    --main-color-400: #3399FF;
+    --main-color-300: #66B2FF;
+    --main-color-200: #99CCFF;
+    --main-color-100: #CCE5FF;
+    --main-color-50:  #E6F3FF; /* Azul suave */
+
+  }
+
+  .cyan {
+    --main-color-900: #003366; /* Azul bem escuro */
+    --main-color-800: #004080;
+    --main-color-700: #f4bc1f;
+    --main-color-600: #0066CC; /* Azul médio */
+    --main-color-500: #BF9006; /* Azul brilhante */
+    --main-color-400: #3399FF;
+    --main-color-300: #66B2FF;
+    --main-color-200: #99CCFF;
+    --main-color-100: #CCE5FF; /* Azul muito claro */
+    --main-color-50:  #E6F3FF; /* Azul quase branco */
+}
+
+.blue {
+    --main-color-900: #00263F; /* Azul mais escuro */
+    --main-color-800: #003A5C;
+    --main-color-700: #efbc2f;
+    --main-color-600: #0064A3;
+    --main-color-500: #BF9006; /* Azul moderado */
+    --main-color-400: #3399FF;
+    --main-color-300: #66B2FF;
+    --main-color-200: #99CCFF;
+    --main-color-100: #CCE5FF;
+    --main-color-50:  #E6F3FF; /* Azul suave */
+}
+  
+  .emerald {
+
+    --main-color-900: #064E3B;
+
+    --main-color-800: #065F46;
+
+    --main-color-700: #047857;
+
+    --main-color-600: #059669;
+
+    --main-color-500: #10B981;
+
+    --main-color-400: #34D399;
+
+    --main-color-300: #6EE7B7;
+
+    --main-color-200: #A7F3D0;
+
+    --main-color-100: #D1FAE5;
+
+    --main-color-50: #ECFDF5;
+
+  }
+  
+  .violet {
+    
+    --main-color-900: #4C1D95;
+
+    --main-color-800: #5B21B6;
+
+    --main-color-700: #6D28D9;
+
+    --main-color-600: #7C3AED;
+
+    --main-color-500: #8B5CF6;
+
+    --main-color-400: #C084FC;
+
+    --main-color-300: #C4B5FD;
+
+    --main-color-200: #DDD6FE;
+
+    --main-color-100: #EDE9FE;
+
+    --main-color-50: #F5F3FF;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+ 
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+ 
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+ 
+    --card: 224 71% 4%;
+    --card-foreground: 213 31% 91%;
+ 
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+ 
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+ 
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+ 
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+ 
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+ 
+    --ring: 216 34% 17%;
+ 
+    --radius: 0.5rem;
+  }
+
+
+}
+
+@layer base {
+  * {
+    @apply border-border;
+}
+    /* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 3px;
+}}
+
+
+
+body {
+  font-family: '', sans-serif;
+  @apply bg-background text-foreground;
+}
+
+/* Scrollbar customizado */
+::-webkit-scrollbar-thumb:hover {
+  background: #0051ff;
+}
+
+.ql-toolbar {
+  background-color: white;
+  width: 100%;
+}
+
+.ql-container {
+  min-height: 200px;
+  width: auto;
+  max-width: 100%;
+  margin: 0 auto; 
+  height: auto !important;
+}
+
+.ql-editor{
+  height: 300px !important;
+}
+
+
+.areaResize {
+  @apply
+  w-full h-[2.125rem] border border-dashed border-gray-400 rounded-md dark:border-gray-600
+}
